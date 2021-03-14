@@ -16,7 +16,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.CodeAnalysis.CSharp.Scripting" Version="3.8.0" />
-    <PackageReference Include="UiPath.Workflow" Version="1.0.0-20210111-01" />
+    <PackageReference Include="UiPath.Workflow" Version="1.0.0-20210309-04" />
   </ItemGroup>
 
 </Project>

@@ -38,11 +38,13 @@ namespace TestCoreW
             
             ActivityXamlServicesSettings settings = new ActivityXamlServicesSettings
             {
-                CompileExpressions = true
+                CompileExpressions = true 
             };
+            
+            String stFilePath = Directory.GetCurrentDirectory();
+            stFilePath += "\\..\\..\\..\\WorkflowConsoleApplication1\\Workflow1.xaml";
 
-        
-        xamlString = System.IO.File.ReadAllText("D:\\Projects\\TestCoreW\\WorkflowConsoleApplication1\\Workflow1.xaml");
+            xamlString = System.IO.File.ReadAllText(stFilePath);
                
             var ActivityFromFile = ActivityXamlServices.Load(new StringReader(xamlString), settings);
             Dictionary<string, object> inputs = new Dictionary<string, object>();

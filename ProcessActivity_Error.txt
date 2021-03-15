@@ -1,0 +1,22 @@
+System.InvalidOperationException
+  HResult=0x80131509
+  Message=CacheMetadata for activity 'WorkflowConsoleApplication1.Workflow1' threw 'System.Xaml.XamlObjectWriterException: 'Cannot create unknown type '{clr-namespace:ActivityLib;assembly=CoreActivities}CodeActivity1'.' Line number '47' and line position '6'.
+   at System.Xaml.XamlObjectWriter.WriteStartObject(XamlType xamlType)
+   at System.Xaml.XamlWriter.WriteNode(XamlReader reader)
+   at System.Xaml.XamlServices.Transform(XamlReader xamlReader, XamlWriter xamlWriter, Boolean closeWriter)
+   at System.Xaml.XamlServices.Transform(XamlReader xamlReader, XamlWriter xamlWriter)
+   at System.Activities.XamlIntegration.FuncFactory`1.Evaluate()
+   at System.Activities.DynamicActivity.OnInternalCacheMetadata(Boolean createEmptyBindings)
+   at System.Activities.Activity.InternalCacheMetadata(Boolean createEmptyBindings, IList`1& validationErrors)
+   at System.Activities.ActivityUtilities.ProcessActivity(ChildActivity childActivity, ChildActivity& nextActivity, Stack`1& activitiesRemaining, ActivityCallStack parentChain, IList`1& validationErrors, ProcessActivityTreeOptions options, ProcessActivityCallback callback)
+   at System.Activities.ActivityUtilities.ProcessActivityTreeCore(ChildActivity currentActivity, ActivityCallStack parentChain, ProcessActivityTreeOptions options, ProcessActivityCallback callback, IList`1& validationErrors)
+   at System.Activities.ActivityUtilities.CacheRootMetadata(Activity activity, LocationReferenceEnvironment hostEnvironment, ProcessActivityTreeOptions options, ProcessActivityCallback callback, IList`1& validationErrors)
+   at System.Activities.XamlIntegration.ActivityXamlServices.RequiresCompilation(IDynamicActivity dynamicActivity, LocationReferenceEnvironment environment, String& language)'.
+  Source=UiPath.Workflow
+  StackTrace:
+   at System.Activities.XamlIntegration.ActivityXamlServices.RequiresCompilation(IDynamicActivity dynamicActivity, LocationReferenceEnvironment environment, String& language)
+   at System.Activities.XamlIntegration.ActivityXamlServices.Compile(IDynamicActivity dynamicActivity, ActivityXamlServicesSettings settings)
+   at System.Activities.XamlIntegration.ActivityXamlServices.Load(XamlReader xamlReader, ActivityXamlServicesSettings settings)
+   at System.Activities.XamlIntegration.ActivityXamlServices.Load(XmlReader xmlReader, ActivityXamlServicesSettings settings)
+   at System.Activities.XamlIntegration.ActivityXamlServices.Load(TextReader textReader, ActivityXamlServicesSettings settings)
+   at TestCoreW.Program.Main(String[] args) in C:\Work\Projects\TestCoreWF\TestCoreWF\Program.cs:line 49

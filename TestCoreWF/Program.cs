@@ -34,7 +34,7 @@ namespace TestCoreW
 
             //var helloWorldActivity = ActivityXamlServices.Load(new StringReader(xamlString));
             //System.Activities.WorkflowInvoker.Invoke(helloWorldActivity);
-            string xamlString;
+            
             
             ActivityXamlServicesSettings settings = new ActivityXamlServicesSettings
             {
@@ -44,9 +44,16 @@ namespace TestCoreW
             String stFilePath = Directory.GetCurrentDirectory();
             stFilePath += "\\..\\..\\..\\..\\WorkflowConsoleApplication1\\Workflow1.xaml";
 
-            xamlString = System.IO.File.ReadAllText(stFilePath);
+            string xamlString = System.IO.File.ReadAllText(stFilePath);
+            StringReader stReader = new StringReader(xamlString);
+            // TODO : pass here assemblies list
+            var context = new System.Xaml.XamlSchemaContext();
 
-            var ActivityFromFile = ActivityXamlServices.Load(new StringReader(xamlString), settings);
+            var ActivityBuilder = ActivityXamlServices.CreateBuilderReader(stReader, context);
+
+            //var ActivityFromFile = ActivityXamlServices.Load(new StringReader(xamlString), settings);
+            var ActivityFromFile = ActivityXamlServices.Load(ActivityBuilder, settings);
+            
             Dictionary<string, object> inputs = new Dictionary<string, object>();
 
             inputs.Add("x", 50);

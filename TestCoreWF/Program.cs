@@ -42,10 +42,10 @@ namespace TestCoreW
             };
             
             String stFilePath = Directory.GetCurrentDirectory();
-            stFilePath += "\\..\\..\\..\\WorkflowConsoleApplication1\\Workflow1.xaml";
+            stFilePath += "\\..\\..\\..\\..\\WorkflowConsoleApplication1\\Workflow1.xaml";
 
             xamlString = System.IO.File.ReadAllText(stFilePath);
-               
+
             var ActivityFromFile = ActivityXamlServices.Load(new StringReader(xamlString), settings);
             Dictionary<string, object> inputs = new Dictionary<string, object>();
 

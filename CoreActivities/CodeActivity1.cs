@@ -16,7 +16,8 @@ namespace ActivityLib
 #endif
     {
         // Define an activity input argument of type string
-        public InArgument<string> Text { get; set; }
+        public InArgument<int> op1 { get; set; }
+        public InArgument<int> op2 { get; set; }
 
         // If your activity returns a value, derive from CodeActivity<TResult>
         // and return the value from the Execute method.
@@ -27,9 +28,12 @@ namespace ActivityLib
 #endif
         {
             // Obtain the runtime value of the Text input argument
-            string text = context.GetValue(this.Text);
+            int _op1 = context.GetValue(this.op1);
+            int _op2 = context.GetValue(this.op2);
 
-            System.Console.WriteLine("From Activty");
+            int _Sum = _op1 + _op2;
+
+            System.Console.WriteLine("From Activty, Sum is = " + _Sum.ToString());
         }
     }
 }

@@ -44,13 +44,7 @@
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Sequence sap2010:WorkflowViewState.IdRef="Sequence_1">
-    <a:CodeActivity1 sap2010:WorkflowViewState.IdRef="CodeActivity1_3">
-      <a:CodeActivity1.Text>
-        <InArgument x:TypeArguments="x:String">
-          <mca:CSharpValue x:TypeArguments="x:String">"Hello</mca:CSharpValue>
-        </InArgument>
-      </a:CodeActivity1.Text>
-    </a:CodeActivity1>
+    <a:CodeActivity1 DisplayName="Sum" sap2010:WorkflowViewState.IdRef="CodeActivity1_4" op1="10" op2="20" />
     <WriteLine sap2010:WorkflowViewState.IdRef="WriteLine_2">
       <InArgument x:TypeArguments="x:String">
         <mca:CSharpValue x:TypeArguments="x:String">" x = " + x.ToString()</mca:CSharpValue>
@@ -86,11 +80,11 @@
         </InArgument>
       </Assign.Value>
     </Assign>
-    <sads:DebugSymbol.Symbol>d0ZDOlxXb3JrXFByb2plY3RzXFRlc3RDb3JlV0ZcV29ya2Zsb3dDb25zb2xlQXBwbGljYXRpb24xXFdvcmtmbG93MS54YW1sEC4DWg4CAQEvBTUXAgEeNgU6EQIBGTsFRwoCARBIBUwRAgELTQVYDgIBAjILMk8CAR84CThdAgEaPgs+UwIBEUIJQlYCARdFCUVVAgEVSglKSwIBDFULVW4CAQdQC1BUAgEDQkdCUwIBGEVHRVICARY=</sads:DebugSymbol.Symbol>
+    <sads:DebugSymbol.Symbol>d0ZDOlxXb3JrXFByb2plY3RzXFRlc3RDb3JlV0ZcV29ya2Zsb3dDb25zb2xlQXBwbGljYXRpb24xXFdvcmtmbG93MS54YW1sES4DVA4CAQEvBS9uAgEeMAU0EQIBGTUFQQoCARBCBUYRAgELRwVSDgIBAi9nL2sCASAvXi9iAgEfMgkyXQIBGjgLOFMCARE8CTxWAgEXPwk/VQIBFUQJREsCAQxPC09uAgEHSgtKVAIBAzxHPFMCARg/Rz9SAgEW</sads:DebugSymbol.Symbol>
   </Sequence>
   <sap2010:WorkflowViewState.ViewStateManager>
     <sap2010:ViewStateManager>
-      <sap2010:ViewStateData Id="CodeActivity1_3" sap:VirtualizedContainerService.HintSize="464,22" />
+      <sap2010:ViewStateData Id="CodeActivity1_4" sap:VirtualizedContainerService.HintSize="464,22" />
       <sap2010:ViewStateData Id="WriteLine_2" sap:VirtualizedContainerService.HintSize="464,62" />
       <sap2010:ViewStateData Id="WriteLine_3" sap:VirtualizedContainerService.HintSize="210,62" />
       <sap2010:ViewStateData Id="WriteLine_4" sap:VirtualizedContainerService.HintSize="210,62" />
